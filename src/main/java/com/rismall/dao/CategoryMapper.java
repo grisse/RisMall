@@ -1,5 +1,7 @@
 package com.rismall.dao;
 
+import java.util.List;
+
 import com.rismall.pojo.Category;
 
 public interface CategoryMapper {
@@ -50,4 +52,6 @@ public interface CategoryMapper {
      * @mbggenerated Sun May 26 18:11:50 CST 2019
      */
     int updateByPrimaryKey(Category record);
+    
+    List<Category> selectCategoryChildrenByParentId(Integer parentId);
 }

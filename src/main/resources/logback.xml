@@ -5,15 +5,15 @@
         <encoder>
             <pattern>[%d{HH:mm:ss.SSS}][%p][%c{40}][%t] %m%n</pattern>
         </encoder>
-        <filter>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
         </filter>
     </appender>
 
     <appender name="rismall" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>/developer/apache-tomcat-7.0.73/logs/rismall.log</File>
+        <File>D:/apache-tomcat-7.0.75/logs/rismall.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/developer/apache-tomcat-7.0.73/logs/rismal.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>D:/apache-tomcat-7.0.75/logs/rismal.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <!-- 最大存储时期 此处为10天 -->
             <maxHistory>10</maxHistory>
@@ -24,9 +24,9 @@
     </appender>
 
     <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>/developer/apache-tomcat-7.0.73/logs/error.log</File>
+        <File>D:/apache-tomcat-7.0.75/logs/error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/developer/apache-tomcat-7.0.73/logs/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>D:/apache-tomcat-7.0.75/logs/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <!-- 最大存储时期 此处为10天 -->
             <maxHistory>10</maxHistory>
